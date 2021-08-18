@@ -1,3 +1,3 @@
-<script type="text/javascript" src="<?= config('app.url') ?>/vendor/quantic/igniter/src/Workers/handlerAssets/assets/script.js"></script>
+<script type="text/javascript" src="<?= config('app.url') ?>/vendor/minivel/boot/src/Igniter/Workers/handlerAssets/assets/script.js"></script>
 </body>
 </html>

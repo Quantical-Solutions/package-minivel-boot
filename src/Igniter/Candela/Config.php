@@ -4,7 +4,7 @@ namespace Minivel\Igniter\Candela;
 
 use Carbon\Carbon;
 use Jenssegers\Blade\Blade;
-use Minivel\Wormhole\Wormhole;
+use Minivel\Igniter\Wormhole\Wormhole;
 use Minivel\Uxdebugger\Debugger as Uxdebug;
 use Minivel\Igniter\Solutions\Solutions;
 use Minivel\Igniter\Candela\Expander as Database;
@@ -13,45 +13,6 @@ use Minivel\Igniter\Spectral\DataCollector;
 
 class Config
 {
-    /**
-     * ConvertEnvConstants method
-     * Get all .init file constants
-     *
-     * @return array
-     */
-    public static function ConvertEnvConstants()
-    {
-        $response = [];
-        if (file_exists(ROOTDIR . '/.init')
-            && str_contains(file_get_contents(ROOTDIR . '/.init'), '=')) {
-
-            $env_file = file_get_contents(ROOTDIR . '/.init');
-            $lines = explode("\n", $env_file);
-
-            foreach ($lines as $line) {
-
-                if (str_contains($line, '=')) {
-
-                    $constant = trim(explode('=', $line)[0]);
-                    $value = trim(explode('=', $line)[1]);
-
-                    if (str_starts_with($value, '"${')
-                        && strpos($value, '}"') === strlen($value) - 2) {
-
-                        $length = strlen($value) - 5;
-                        $slice = substr($value, 3, $length);
-                        $response[$constant] = $slice;
-
-                    } else {
-
-                        $response[$constant] = $value;
-                    }
-                }
-            }
-        }
-        return $response;
-    }
-
     /**
      * uriSegments method
      * Convert REQUEST_URI in array.
@@ -153,7 +114,7 @@ class Config
             } else {
 
                 $head = (strpos($original, '<head>') === false)
-                    ?  '<head><meta charset="UTF-8"><title>Empty view...</title><link rel="icon" href="/vendor/quantic/igniter/src/ErrorDocument/assets/favicon.png"></head>'
+                    ?  '<head><meta charset="UTF-8"><title>Empty view...</title><link rel="icon" href="/vendor/minivel/boot/src/Igniter/ErrorDocument/assets/favicon.png"></head>'
                     : '';
                 $content = $head . PHP_EOL . $original . PHP_EOL . $debug;
                 return $content;
@@ -238,7 +199,7 @@ class Config
             }
         }
 
-        $path = ROOTDIR . '/dimension/svg/' . $file . '.svg';
+        $path = ROOTDIR . '/storage/svgs/' . $file . '.svg';
         if (file_exists($path)) {
 
             ob_start();

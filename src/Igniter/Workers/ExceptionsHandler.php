@@ -7,7 +7,7 @@ use Minivel\Igniter\Wormhole\Wormhole;
 use Minivel\Uxdebugger\Debugger as Uxdebug;
 use Minivel\Igniter\Solutions\Solutions;
 use Illuminate\Database\Capsule\Manager as DB;
-use Minivel\Chosen\Matrix\Auth;
+use Minivel\Auth\Matrix\Auth;
 
 class ExceptionsHandler
 {
@@ -38,10 +38,10 @@ class ExceptionsHandler
         $authUser = Auth::$user;
         // Display Error View
         ob_start();
-        require_once(ROOTDIR . '/vendor/quantic/igniter/src/Workers/handlerAssets/head.php');
-        require_once(ROOTDIR . '/vendor/quantic/igniter/src/Workers/handlerAssets/body.php');
+        require_once(ROOTDIR . '/vendor/minivel/boot/src/Igniter/Workers/handlerAssets/head.php');
+        require_once(ROOTDIR . '/vendor/minivel/boot/src/Igniter/Workers/handlerAssets/body.php');
         echo $debug;
-        require_once(ROOTDIR . '/vendor/quantic/igniter/src/Workers/handlerAssets/footer.php');
+        require_once(ROOTDIR . '/vendor/minivel/boot/src/Igniter/Workers/handlerAssets/footer.php');
         $content = ob_get_clean();
         echo $content;
     }

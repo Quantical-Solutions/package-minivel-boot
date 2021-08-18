@@ -3,7 +3,8 @@
         <section class="xLarge-12 large-12 medium-12 small-12 xSmall-12">
             <div class="container">
                 <div id="ideSets">
-                    <img id="ideImg" src="<?= config('app.url') ?>/vendor/quantic/igniter/src/Workers/handlerAssets/assets/ide/<?= config('app.ide') ?>.png">
+                    <img id="ideImg" src="<?= config('app.url')
+                    ?>/vendor/minivel/boot/src/Igniter/Workers/handlerAssets/assets/ide/<?= config('app.ide') ?>.png">
                     <p>
                         Your IDE is set on&nbsp;<?= $ideTitle ?>. You can change coding program in&nbsp;&nbsp;
                         <i>"config/app.php"</i>&nbsp;&nbsp;file.

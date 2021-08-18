@@ -8,17 +8,13 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="msapplication-tap-highlight" content="no" />
     <title>🚧 <?= $data['message'] ?> 🚧</title>
-    <link rel="icon" href="<?= config('app.url') ?>/vendor/quantic/igniter/src/Workers/handlerAssets/assets/favicon.png">
-    <link rel="stylesheet" href="<?= config('app.url') ?>/vendor/quantic/igniter/src/Wormhole/assets/reset.css"
-          type="text/css">
-    <link rel="stylesheet" href="<?= config('app.url')
-    ?>/vendor/quantic/igniter/src/Workers/handlerAssets/assets/responsive.css" type="text/css">
-    <link rel="stylesheet" href="<?= config('app.url') ?>/vendor/quantic/igniter/src/Wormhole/assets/debugFonts.css" type="text/css">
-    <link rel="stylesheet" href="<?= config('app.url')
-    ?>/vendor/quantic/igniter/src/Workers/handlerAssets/assets/styles/ocean.css">
-    <link rel="stylesheet" href="<?= config('app.url') ?>/vendor/quantic/igniter/src/Workers/handlerAssets/assets/style.css" type="text/css">
+    <link rel="icon" href="<?= config('app.url') ?>/vendor/minivel/boot/src/Igniter/Workers/handlerAssets/assets/favicon.png">
+    <link rel="stylesheet" href="<?= config('app.url') ?>/vendor/minivel/boot/src/Igniter/Wormhole/assets/reset.css" type="text/css">
+    <link rel="stylesheet" href="<?= config('app.url') ?>/vendor/minivel/boot/src/Igniter/Workers/handlerAssets/assets/responsive.css" type="text/css">
+    <link rel="stylesheet" href="<?= config('app.url') ?>/vendor/minivel/boot/src/Igniter/Wormhole/assets/debugFonts.css" type="text/css">
+    <link rel="stylesheet" href="<?= config('app.url') ?>/vendor/minivel/boot/src/Igniter/Workers/handlerAssets/assets/styles/ocean.css">
+    <link rel="stylesheet" href="<?= config('app.url') ?>/vendor/minivel/boot/src/Igniter/Workers/handlerAssets/assets/style.css" type="text/css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="<?= config('app.url')
-    ?>/vendor/quantic/igniter/src/Workers/handlerAssets/assets/highlight.pack.js"></script>
+    <script type="text/javascript" src="<?= config('app.url') ?>/vendor/minivel/boot/src/Igniter/Workers/handlerAssets/assets/highlight.pack.js"></script>
 </head>
 <body>
