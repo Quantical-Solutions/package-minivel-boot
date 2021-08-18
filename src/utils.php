@@ -1,18 +1,18 @@
 <?php
 
 use App\Core\Route;
-use Quantic\Igniter\Workers;
+use Minivel\Igniter\Workers;
 use Carbon\Carbon;
 use Jenssegers\Blade\Blade;
-use Quantic\Igniter\Candela\Config as Config;
-use Quantic\Igniter\Workers\ErrorsHandler;
-use Quantic\Igniter\Workers\ExceptionsHandler;
-use Quantic\Igniter\Workers\SQLHandler;
-use Quantic\Igniter\Solutions\Solutions;
-use Quantic\Igniter\Workers\SwiftMailerCollector as Mail;
-use Quantic\Igniter\ErrorDocument\ErrorsPage;
-use Quantic\Chosen\Matrix\Deploy;
-use Quantic\Chosen\Matrix\Auth;
+use Minivel\Igniter\Candela\Config as Config;
+use Minivel\Igniter\Workers\ErrorsHandler;
+use Minivel\Igniter\Workers\ExceptionsHandler;
+use Minivel\Igniter\Workers\SQLHandler;
+use Minivel\Igniter\Solutions\Solutions;
+use Minivel\Igniter\Workers\SwiftMailerCollector as Mail;
+use Minivel\Igniter\ErrorDocument\ErrorsPage;
+use Minivel\Auth\Matrix\Deploy;
+use Minivel\Auth\Matrix\Auth;
 
 if (!function_exists('env')) {
 
