@@ -17,6 +17,13 @@ class Render
 
         foreach ($routes as $route) {
 
+            if (str_contains($request->url, '/public')) {
+                $explode = explode('/public', $request->url);
+                $request->url = $explode[1];
+                $count = count(explode('/', $explode[0]));
+                $request->segments -= $count;
+            }
+
             if (count($route->required) === $request->segments || $route->segments === $request->segments) {
 
                 $args = $route->args;
