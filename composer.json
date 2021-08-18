@@ -1,0 +1,45 @@
+{
+  "name": "minivel/boot",
+  "type": "library",
+  "description": "Minivel Framework booting package",
+  "keywords": ["quantic","igniter"],
+  "homepage": "https://github.com/Quantical-Solutions/package-minivel-boot",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Frédéric Geffray",
+      "email": "in-touch-fg@quanticalsolutions.com",
+      "homepage": "https://quanticalsolutions.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.4.0",
+    "ext-json": "*",
+    "jenssegers/blade": "^1.3",
+    "nesbot/carbon": "^2.36.1",
+    "ifsnop/mysqldump-php": ">=2.9",
+    "digitalnature/php-ref": "dev-master",
+    "dragonmantank/cron-expression": "^3.0",
+    "geoip2/geoip2": "^2.10",
+    "guzzlehttp/guzzle": "^6.3",
+    "illuminate/database": ">=7.22",
+    "maximebf/cachecache": ">=0.1.0",
+    "swiftmailer/swiftmailer":">=6.2.3",
+    "owasp/csrf-protector-php": "1.0.2",
+    "monolog/monolog": ">=2.1.1",
+    "egulias/email-validator": "^2.1.10",
+    "symfony/http-foundation": "^5.1",
+    "symfony/mime": "^5.1",
+    "wujunze/php-cli-color": ">=2.4.0"
+  },
+  "autoload": {
+    "files": [
+      "src/utils.php"
+    ],
+    "psr-4": {
+      "Minivel\\Boot": "src/"
+    }
+  },
+  "minimum-stability": "dev"
+}

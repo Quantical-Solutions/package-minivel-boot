@@ -1,0 +1,876 @@
+@font-face {
+    font-family: 'quantic-icons';
+    src:  url('fonts/quantic-icons.eot');
+    src:  url('fonts/quantic-icons.eot') format('embedded-opentype'),
+    url('fonts/quantic-icons.ttf') format('truetype'),
+    url('fonts/quantic-icons.woff') format('woff'),
+    url('fonts/quantic-icons.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+i {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'quantic-icons' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.quantic-icon-quote:before {
+    content: "\e916";
+}
+.quantic-icon-quote1:before {
+    content: "\e917";
+}
+.quantic-icon-tag:before {
+    content: "\e918";
+}
+.quantic-icon-tag1:before {
+    content: "\e919";
+}
+.quantic-icon-link:before {
+    content: "\e91a";
+}
+.quantic-icon-link1:before {
+    content: "\e91b";
+}
+.quantic-icon-cabinet:before {
+    content: "\e91c";
+}
+.quantic-icon-cabinet1:before {
+    content: "\e91d";
+}
+.quantic-icon-events:before {
+    content: "\e91e";
+}
+.quantic-icon-cals:before {
+    content: "\e91f";
+}
+.quantic-icon-calendar:before {
+    content: "\e920";
+}
+.quantic-icon-file:before {
+    content: "\e921";
+}
+.quantic-icon-file1:before {
+    content: "\e922";
+}
+.quantic-icon-file2:before {
+    content: "\e923";
+}
+.quantic-icon-files:before {
+    content: "\e924";
+}
+.quantic-icon-phone:before {
+    content: "\e925";
+}
+.quantic-icon-tablet:before {
+    content: "\e926";
+}
+.quantic-icon-window:before {
+    content: "\e927";
+}
+.quantic-icon-monitor:before {
+    content: "\e928";
+}
+.quantic-icon-ipod:before {
+    content: "\e929";
+}
+.quantic-icon-tv:before {
+    content: "\e92a";
+}
+.quantic-icon-camera:before {
+    content: "\e92b";
+}
+.quantic-icon-camera1:before {
+    content: "\e92c";
+}
+.quantic-icon-camera2:before {
+    content: "\e92d";
+}
+.quantic-icon-film:before {
+    content: "\e92e";
+}
+.quantic-icon-film1:before {
+    content: "\e92f";
+}
+.quantic-icon-film2:before {
+    content: "\e930";
+}
+.quantic-icon-microphone:before {
+    content: "\e931";
+}
+.quantic-icon-microphone1:before {
+    content: "\e932";
+}
+.quantic-icon-microphone2:before {
+    content: "\e933";
+}
+.quantic-icon-drink:before {
+    content: "\e934";
+}
+.quantic-icon-drink1:before {
+    content: "\e935";
+}
+.quantic-icon-drink2:before {
+    content: "\e936";
+}
+.quantic-icon-drink3:before {
+    content: "\e937";
+}
+.quantic-icon-coffee:before {
+    content: "\e938";
+}
+.quantic-icon-mug:before {
+    content: "\e939";
+}
+.quantic-icon-icecream:before {
+    content: "\e93a";
+}
+.quantic-icon-cake:before {
+    content: "\e93b";
+}
+.quantic-icon-inbox:before {
+    content: "\e93c";
+}
+.quantic-icon-download:before {
+    content: "\e93d";
+}
+.quantic-icon-upload:before {
+    content: "\e93e";
+}
+.quantic-icon-inbox1:before {
+    content: "\e93f";
+}
+.quantic-icon-checkmark:before {
+    content: "\e940";
+}
+.quantic-icon-checkmark1:before {
+    content: "\e941";
+}
+.quantic-icon-cancel:before {
+    content: "\e942";
+}
+.quantic-icon-cancel2:before {
+    content: "\e943";
+}
+.quantic-icon-plus:before {
+    content: "\e944";
+}
+.quantic-icon-plus1:before {
+    content: "\e945";
+}
+.quantic-icon-minus:before {
+    content: "\e946";
+}
+.quantic-icon-minus1:before {
+    content: "\e947";
+}
+.quantic-icon-notice:before {
+    content: "\e948";
+}
+.quantic-icon-notice1:before {
+    content: "\e949";
+}
+.quantic-icon-cog:before {
+    content: "\e94a";
+}
+.quantic-icon-cogs:before {
+    content: "\e94b";
+}
+.quantic-icon-cog1:before {
+    content: "\e94c";
+}
+.quantic-icon-warning:before {
+    content: "\e94d";
+}
+.quantic-icon-health:before {
+    content: "\e94e";
+}
+.quantic-icon-suitcase:before {
+    content: "\e94f";
+}
+.quantic-icon-suitcase1:before {
+    content: "\e950";
+}
+.quantic-icon-suitcase2:before {
+    content: "\e951";
+}
+.quantic-icon-picture:before {
+    content: "\e952";
+}
+.quantic-icon-bibli:before {
+    content: "\e953";
+}
+.quantic-icon-pictures:before {
+    content: "\e954";
+}
+.quantic-icon-android:before {
+    content: "\e955";
+}
+.quantic-icon-cassette:before {
+    content: "\e958";
+}
+.quantic-icon-watch:before {
+    content: "\e959";
+}
+.quantic-icon-chronometer:before {
+    content: "\e95a";
+}
+.quantic-icon-watch1:before {
+    content: "\e95b";
+}
+.quantic-icon-alarmclock:before {
+    content: "\e95c";
+}
+.quantic-icon-time1:before {
+    content: "\e95d";
+}
+.quantic-icon-time:before {
+    content: "\e95e";
+}
+.quantic-icon-headphones:before {
+    content: "\e95f";
+}
+.quantic-icon-wallet:before {
+    content: "\e960";
+}
+.quantic-icon-checkmark2:before {
+    content: "\e961";
+}
+.quantic-icon-cancel1:before {
+    content: "\e962";
+}
+.quantic-icon-eye:before {
+    content: "\e963";
+}
+.quantic-icon-position:before {
+    content: "\e964";
+}
+.quantic-icon-sitemap:before {
+    content: "\e965";
+}
+.quantic-icon-sitemap1:before {
+    content: "\e966";
+}
+.quantic-icon-cloud:before {
+    content: "\e967";
+}
+.quantic-icon-upload1:before {
+    content: "\e968";
+}
+.quantic-icon-chart1:before {
+    content: "\e969";
+}
+.quantic-icon-chart2:before {
+    content: "\e96a";
+}
+.quantic-icon-chart3:before {
+    content: "\e96b";
+}
+.quantic-icon-chart4:before {
+    content: "\e96c";
+}
+.quantic-icon-chart5:before {
+    content: "\e96d";
+}
+.quantic-icon-chart:before {
+    content: "\e96e";
+}
+.quantic-icon-location:before {
+    content: "\e96f";
+}
+.quantic-icon-download1:before {
+    content: "\e970";
+}
+.quantic-icon-basket:before {
+    content: "\e971";
+}
+.quantic-icon-drives:before {
+    content: "\e972";
+}
+.quantic-icon-games:before {
+    content: "\61";
+}
+.quantic-icon-alarm:before {
+    content: "\e973";
+}
+.quantic-icon-alarm-cancel:before {
+    content: "\e974";
+}
+.quantic-icon-phone1:before {
+    content: "\e975";
+}
+.quantic-icon-rooms:before {
+    content: "\e976";
+}
+.quantic-icon-image:before {
+    content: "\e977";
+}
+.quantic-icon-open:before {
+    content: "\e978";
+}
+.quantic-icon-sale:before {
+    content: "\e979";
+}
+.quantic-icon-direction:before {
+    content: "\e97a";
+}
+.quantic-icon-map:before {
+    content: "\e901";
+}
+.quantic-icon-trashcan:before {
+    content: "\e97b";
+}
+.quantic-icon-vote:before {
+    content: "\e97c";
+}
+.quantic-icon-graduate:before {
+    content: "\e97d";
+}
+.quantic-icon-lab:before {
+    content: "\e97e";
+}
+.quantic-icon-tie:before {
+    content: "\e97f";
+}
+.quantic-icon-dglasses:before {
+    content: "\e986";
+}
+.quantic-icon-microwave:before {
+    content: "\e987";
+}
+.quantic-icon-refrigerator:before {
+    content: "\e988";
+}
+.quantic-icon-oven:before {
+    content: "\e989";
+}
+.quantic-icon-washingmachine:before {
+    content: "\e98a";
+}
+.quantic-icon-mouse:before {
+    content: "\e98b";
+}
+.quantic-icon-smiley:before {
+    content: "\e98c";
+}
+.quantic-icon-sad:before {
+    content: "\e98d";
+}
+.quantic-icon-mute:before {
+    content: "\e98e";
+}
+.quantic-icon-hand:before {
+    content: "\e98f";
+}
+.quantic-icon-radio:before {
+    content: "\e990";
+}
+.quantic-icon-satellite:before {
+    content: "\e991";
+}
+.quantic-icon-medal:before {
+    content: "\e992";
+}
+.quantic-icon-medal1:before {
+    content: "\e993";
+}
+.quantic-icon-switch:before {
+    content: "\e994";
+}
+.quantic-icon-key:before {
+    content: "\e995";
+}
+.quantic-icon-cord:before {
+    content: "\e996";
+}
+.quantic-icon-locked:before {
+    content: "\e997";
+}
+.quantic-icon-unlocked:before {
+    content: "\e998";
+}
+.quantic-icon-locked1:before {
+    content: "\e999";
+}
+.quantic-icon-unlocked1:before {
+    content: "\e99a";
+}
+.quantic-icon-magnifier:before {
+    content: "\e99b";
+}
+.quantic-icon-zoomin:before {
+    content: "\e99c";
+}
+.quantic-icon-zoomout:before {
+    content: "\e99d";
+}
+.quantic-icon-stack1:before {
+    content: "\e99e";
+}
+.quantic-icon-stack2:before {
+    content: "\e99f";
+}
+.quantic-icon-stack:before {
+    content: "\e9a0";
+}
+.quantic-icon-lamp:before {
+    content: "\e9a8";
+}
+.quantic-icon-lamp1:before {
+    content: "\e9a9";
+}
+.quantic-icon-umbrella:before {
+    content: "\e9aa";
+}
+.quantic-icon-streetlight:before {
+    content: "\e9ab";
+}
+.quantic-icon-bomb:before {
+    content: "\e9ac";
+}
+.quantic-icon-archive:before {
+    content: "\e9ad";
+}
+.quantic-icon-battery:before {
+    content: "\e9ae";
+}
+.quantic-icon-battery1:before {
+    content: "\e9af";
+}
+.quantic-icon-battery2:before {
+    content: "\e9b0";
+}
+.quantic-icon-battery3:before {
+    content: "\e9b1";
+}
+.quantic-icon-battery4:before {
+    content: "\e9b2";
+}
+.quantic-icon-megaphone:before {
+    content: "\e9b3";
+}
+.quantic-icon-megaphone1:before {
+    content: "\e9b4";
+}
+.quantic-icon-patch:before {
+    content: "\e9b5";
+}
+.quantic-icon-pil:before {
+    content: "\e9b6";
+}
+.quantic-icon-injection:before {
+    content: "\e9b7";
+}
+.quantic-icon-thermometer:before {
+    content: "\e9b8";
+}
+.quantic-icon-lamp2:before {
+    content: "\e9b9";
+}
+.quantic-icon-lamp3:before {
+    content: "\e9ba";
+}
+.quantic-icon-lamp4:before {
+    content: "\e9bb";
+}
+.quantic-icon-cube:before {
+    content: "\e9bc";
+}
+.quantic-icon-box:before {
+    content: "\e9bd";
+}
+.quantic-icon-box1:before {
+    content: "\e9be";
+}
+.quantic-icon-diamond:before {
+    content: "\e9bf";
+}
+.quantic-icon-bag:before {
+    content: "\e9c0";
+}
+.quantic-icon-moneybag:before {
+    content: "\e9c1";
+}
+.quantic-icon-ruler1:before {
+    content: "\e9c6";
+}
+.quantic-icon-ruler2:before {
+    content: "\e9c7";
+}
+.quantic-icon-tools:before {
+    content: "\e9d6";
+}
+.quantic-icon-screwdriver:before {
+    content: "\e9d7";
+}
+.quantic-icon-paint:before {
+    content: "\e9d8";
+}
+.quantic-icon-hammer:before {
+    content: "\e9d9";
+}
+.quantic-icon-brush:before {
+    content: "\e9da";
+}
+.quantic-icon-pen:before {
+    content: "\e9db";
+}
+.quantic-icon-chat:before {
+    content: "\e9dc";
+}
+.quantic-icon-comments:before {
+    content: "\e9dd";
+}
+.quantic-icon-chat1:before {
+    content: "\e9de";
+}
+.quantic-icon-chat2:before {
+    content: "\e9df";
+}
+.quantic-icon-volume:before {
+    content: "\e9e0";
+}
+.quantic-icon-volume1:before {
+    content: "\e9e1";
+}
+.quantic-icon-volume2:before {
+    content: "\e9e2";
+}
+.quantic-icon-equalizer:before {
+    content: "\e9e3";
+}
+.quantic-icon-resize2:before {
+    content: "\e9e8";
+}
+.quantic-icon-download2:before {
+    content: "\e9e9";
+}
+.quantic-icon-calculator:before {
+    content: "\e9ea";
+}
+.quantic-icon-library:before {
+    content: "\e9eb";
+}
+.quantic-icon-auction:before {
+    content: "\e9ec";
+}
+.quantic-icon-justice:before {
+    content: "\e9ed";
+}
+.quantic-icon-stats:before {
+    content: "\e9ee";
+}
+.quantic-icon-stats1:before {
+    content: "\e9ef";
+}
+.quantic-icon-attachment:before {
+    content: "\e9f0";
+}
+.quantic-icon-hourglass:before {
+    content: "\e9f1";
+}
+.quantic-icon-abacus:before {
+    content: "\e9f2";
+}
+.quantic-icon-pencil:before {
+    content: "\e9f3";
+}
+.quantic-icon-pen1:before {
+    content: "\e9f4";
+}
+.quantic-icon-pin:before {
+    content: "\e9f5";
+}
+.quantic-icon-pin1:before {
+    content: "\e9f6";
+}
+.quantic-icon-discout:before {
+    content: "\e9f7";
+}
+.quantic-icon-edit:before {
+    content: "\e9f8";
+}
+.quantic-icon-scissors:before {
+    content: "\e9f9";
+}
+.quantic-icon-profile:before {
+    content: "\e9fa";
+}
+.quantic-icon-profile1:before {
+    content: "\e9fb";
+}
+.quantic-icon-profile2:before {
+    content: "\e9fc";
+}
+.quantic-icon-rotate:before {
+    content: "\e9fd";
+}
+.quantic-icon-rotate1:before {
+    content: "\e9fe";
+}
+.quantic-icon-reply:before {
+    content: "\e9ff";
+}
+.quantic-icon-forward:before {
+    content: "\ea00";
+}
+.quantic-icon-retweet:before {
+    content: "\ea01";
+}
+.quantic-icon-shuffle:before {
+    content: "\ea02";
+}
+.quantic-icon-loop:before {
+    content: "\ea03";
+}
+.quantic-icon-crop:before {
+    content: "\ea04";
+}
+.quantic-icon-square:before {
+    content: "\ea05";
+}
+.quantic-icon-square1:before {
+    content: "\ea06";
+}
+.quantic-icon-circle:before {
+    content: "\ea07";
+}
+.quantic-icon-dollar:before {
+    content: "\ea08";
+}
+.quantic-icon-dollar1:before {
+    content: "\ea09";
+}
+.quantic-icon-coins:before {
+    content: "\ea0a";
+}
+.quantic-icon-pig:before {
+    content: "\ea0b";
+}
+.quantic-icon-bookmark:before {
+    content: "\ea0c";
+}
+.quantic-icon-bookmark1:before {
+    content: "\ea0d";
+}
+.quantic-icon-addressbook:before {
+    content: "\ea0e";
+}
+.quantic-icon-emails:before {
+    content: "\ea0f";
+}
+.quantic-icon-ftp_codes:before {
+    content: "\ea10";
+}
+.quantic-icon-envelope:before {
+    content: "\ea11";
+}
+.quantic-icon-envelope1:before {
+    content: "\ea12";
+}
+.quantic-icon-radioactive:before {
+    content: "\ea13";
+}
+.quantic-icon-music:before {
+    content: "\ea14";
+}
+.quantic-icon-presentation:before {
+    content: "\ea15";
+}
+.quantic-icon-male:before {
+    content: "\ea16";
+}
+.quantic-icon-female:before {
+    content: "\ea17";
+}
+.quantic-icon-aids:before {
+    content: "\ea18";
+}
+.quantic-icon-heart:before {
+    content: "\ea19";
+}
+.quantic-icon-info1:before {
+    content: "\ea1a";
+}
+.quantic-icon-info:before {
+    content: "\ea1b";
+}
+.quantic-icon-piano:before {
+    content: "\ea1c";
+}
+.quantic-icon-rain:before {
+    content: "\ea1d";
+}
+.quantic-icon-snow:before {
+    content: "\ea1e";
+}
+.quantic-icon-lightning:before {
+    content: "\ea1f";
+}
+.quantic-icon-sun:before {
+    content: "\ea20";
+}
+.quantic-icon-moon:before {
+    content: "\ea21";
+}
+.quantic-icon-cloudy:before {
+    content: "\ea22";
+}
+.quantic-icon-cloudy1:before {
+    content: "\ea23";
+}
+.quantic-icon-car:before {
+    content: "\ea24";
+}
+.quantic-icon-bike:before {
+    content: "\ea25";
+}
+.quantic-icon-truck:before {
+    content: "\ea26";
+}
+.quantic-icon-bus:before {
+    content: "\ea27";
+}
+.quantic-icon-bike1:before {
+    content: "\ea28";
+}
+.quantic-icon-plane:before {
+    content: "\ea29";
+}
+.quantic-icon-paperplane:before {
+    content: "\ea2a";
+}
+.quantic-icon-rocket:before {
+    content: "\ea2b";
+}
+.quantic-icon-book:before {
+    content: "\ea2c";
+}
+.quantic-icon-book1:before {
+    content: "\ea2d";
+}
+.quantic-icon-barcode:before {
+    content: "\ea2e";
+}
+.quantic-icon-barcode1:before {
+    content: "\ea2f";
+}
+.quantic-icon-badge1:before {
+    content: "\ea36";
+}
+.quantic-icon-ticket:before {
+    content: "\ea37";
+}
+.quantic-icon-ticket1:before {
+    content: "\ea38";
+}
+.quantic-icon-ticket2:before {
+    content: "\ea39";
+}
+.quantic-icon-microphone3:before {
+    content: "\ea3a";
+}
+.quantic-icon-cone:before {
+    content: "\ea3b";
+}
+.quantic-icon-blocked:before {
+    content: "\ea3c";
+}
+.quantic-icon-stop:before {
+    content: "\ea3d";
+}
+.quantic-icon-keyboard:before {
+    content: "\ea3e";
+}
+.quantic-icon-keyboard1:before {
+    content: "\ea3f";
+}
+.quantic-icon-radio1:before {
+    content: "\ea40";
+}
+.quantic-icon-printer:before {
+    content: "\ea41";
+}
+.quantic-icon-checked:before {
+    content: "\ea42";
+}
+.quantic-icon-error:before {
+    content: "\ea43";
+}
+.quantic-icon-add:before {
+    content: "\ea44";
+}
+.quantic-icon-minus2:before {
+    content: "\ea45";
+}
+.quantic-icon-alert:before {
+    content: "\ea46";
+}
+.quantic-icon-pictures1:before {
+    content: "\ea47";
+}
+.quantic-icon-atom:before {
+    content: "\ea48";
+}
+.quantic-icon-eyedropper:before {
+    content: "\ea49";
+}
+.quantic-icon-globe:before {
+    content: "\ea4a";
+}
+.quantic-icon-globe1:before {
+    content: "\ea4b";
+}
+.quantic-icon-shipping:before {
+    content: "\ea4c";
+}
+.quantic-icon-yingyang:before {
+    content: "\ea4d";
+}
+.quantic-icon-compass:before {
+    content: "\ea4e";
+}
+.quantic-icon-zip:before {
+    content: "\ea4f";
+}
+.quantic-icon-zip1:before {
+    content: "\ea50";
+}
+.quantic-icon-tags:before {
+    content: "\ea55";
+}
+.quantic-icon-heart1:before {
+    content: "\ea56";
+}
+.quantic-icon-heart2:before {
+    content: "\ea57";
+}
+.quantic-icon-usb:before {
+    content: "\ea58";
+}
+.quantic-icon-clipboard:before {
+    content: "\ea59";
+}
+.quantic-icon-clipboard1:before {
+    content: "\e902";
+}
+.quantic-icon-clipboard2:before {
+    content: "\ea5a";
+}
+.quantic-icon-switch1:before {
+    content: "\ea5b";
+}
+.quantic-icon-ruler:before {
+    content: "\ea5c";
+}

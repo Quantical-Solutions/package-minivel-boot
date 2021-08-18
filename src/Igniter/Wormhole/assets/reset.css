@@ -1,0 +1,54 @@
+.wormholesComponents * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    outline: none;
+    text-decoration: none;
+    resize: none;
+    list-style: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+.wormholesComponents article, .wormholesComponents aside, .wormholesComponents details, .wormholesComponents figcaption, .wormholesComponents figure,
+.wormholesComponents footer, .wormholesComponents header, .wormholesComponents hgroup, .wormholesComponents menu, .wormholesComponents nav, .wormholesComponents section {
+    display: block;
+}
+.wormholesComponents ol, .wormholesComponents ul {
+    list-style: none;
+}
+.wormholesComponents blockquote, .wormholesComponents q {
+    quotes: none;
+}
+.wormholesComponents blockquote:before, .wormholesComponents blockquote:after,
+.wormholesComponents q:before, .wormholesComponents q:after {
+    content: '';
+    content: none;
+}
+
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #191919;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #3c3c3c;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #0099cc;
+}
+
+::selection {
+    background-color: #f1f1f1;
+    color: #1c3859;
+    font-weight: bold;
+}
