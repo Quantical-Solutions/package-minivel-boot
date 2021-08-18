@@ -38,7 +38,7 @@
       "src/utils.php"
     ],
     "psr-4": {
-      "Minivel\\Boot\\": "src/"
+      "Minivel\\": "src/"
     }
   },
   "minimum-stability": "dev"
