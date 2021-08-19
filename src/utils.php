@@ -370,6 +370,8 @@ $newSessionName = str_replace('-', '_', str_replace(' ', '_', strtolower(config(
 if (session_name() != $newSessionName) { session_name($newSessionName); }
 session_start();
 
-symlinker();
-set_exception_handler('exception_handler');
-set_error_handler('error_handler');
+if (isset($_SERVER['HTTP_HOST']) && isset($_SERVER['REQUEST_URI'])) {
+    symlinker();
+    set_exception_handler('exception_handler');
+    set_error_handler('error_handler');
+}

@@ -1,6 +1,7 @@
 <?php
 
 define('QUANTIC_START', microtime(true));
+define('ROOTDIR', __DIR__);
 
 /*
 |--------------------------------------------------------------------------
@@ -27,7 +28,7 @@ require __DIR__.'/vendor/autoload.php';
 |
 */
 
-use Quantic\Atom\Shell\Console;
+use Minivel\Atom\Console;
 $response = Console::ExecuteCommand();
 Console::StatusCommand($response);
 
