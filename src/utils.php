@@ -366,10 +366,6 @@ if (!function_exists('storage_path')) {
     }
 }
 
-/*$newSessionName = str_replace('-', '_', str_replace(' ', '_', strtolower(config('app.name'))) . '_session');
-if (session_name() != $newSessionName) { session_name($newSessionName); }*/
-session_start();
-
 if (isset($_SERVER['HTTP_HOST']) && isset($_SERVER['REQUEST_URI'])) {
     symlinker();
     set_exception_handler('exception_handler');
