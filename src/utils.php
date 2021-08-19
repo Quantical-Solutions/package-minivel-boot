@@ -1,6 +1,6 @@
 <?php
 
-use App\Core\Route;
+use Minivel\Igniter\Workers\Route;
 use Minivel\Igniter\Workers;
 use Carbon\Carbon;
 use Jenssegers\Blade\Blade;
@@ -366,8 +366,8 @@ if (!function_exists('storage_path')) {
     }
 }
 
-$newSessionName = str_replace('-', '_', str_replace(' ', '_', strtolower(config('app.name'))) . '_session');
-if (session_name() != $newSessionName) { session_name($newSessionName); }
+/*$newSessionName = str_replace('-', '_', str_replace(' ', '_', strtolower(config('app.name'))) . '_session');
+if (session_name() != $newSessionName) { session_name($newSessionName); }*/
 session_start();
 
 if (isset($_SERVER['HTTP_HOST']) && isset($_SERVER['REQUEST_URI'])) {
