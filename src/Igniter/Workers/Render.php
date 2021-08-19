@@ -24,6 +24,8 @@ class Render
                 $request->segments -= $count;
             }
 
+
+
             if (count($route->required) === $request->segments || $route->segments === $request->segments) {
 
                 $args = $route->args;
@@ -31,12 +33,19 @@ class Render
 
                     if ($route->uri === $request->url) {
 
-                        $this->middlewares($route->middlewares);
-                        $controller = $route->controller;
-                        $method = $route->function;
-                        $render = new ('App\\Http\\Controllers\\' . $controller);
-                        echo $render->$method();
-                        return;
+                        if ($route->method === $request->method) {
+
+                            $this->middlewares($route->middlewares);
+                            $controller = $route->controller;
+                            $method = $route->function;
+                            $render = new ('App\\Http\\Controllers\\' . $controller);
+                            echo $render->$method();
+                            return;
+
+                        } else {
+
+                            trigger_error('The "' . $request->method . '" method is not allowed for this Route.');
+                        }
                     }
 
                 } else {
@@ -44,13 +53,20 @@ class Render
                     $final = $this->uriCleaner($route, $request);
                     if ($final !== false) {
 
-                        $this->middlewares($route->middlewares);
-                        $controller = $final->controller;
-                        $method = $final->function;
-                        $arguments = $this->setArguments($final->args);
-                        $render = new ('App\\Http\\Controllers\\' . $controller);
-                        echo call_user_func_array(array($render, $method), $arguments);
-                        return;
+                        if ($route->method === $request->method) {
+
+                            $this->middlewares($route->middlewares);
+                            $controller = $final->controller;
+                            $method = $final->function;
+                            $arguments = $this->setArguments($final->args);
+                            $render = new ('App\\Http\\Controllers\\' . $controller);
+                            echo call_user_func_array(array($render, $method), $arguments);
+                            return;
+
+                        } else {
+
+                            trigger_error('The "' . $request->method . '" method is not allowed for this Route.');
+                        }
                     }
                 }
             }
