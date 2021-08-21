@@ -30,7 +30,7 @@ class CsrfToken
                 }
             }
             foreach ($_POST as $key => $value) {
-                
+
                 if ($key === '_token' && $value === $_SESSION['_token']) {
                     $token = $value;
                 }
@@ -94,7 +94,10 @@ class CsrfToken
 
                     unset($_SESSION['_token']);
                     Auth::reset();
-                    handleErrors(419);
+                    if (!empty($_GET) || !empty($_POST)) {
+
+                        handleErrors(419);
+                    }
                 }
             }
 
