@@ -57,7 +57,7 @@ class Dumper
 
         } else {
 
-            trigger_error('boson/dumps folder doesn\'t exist. Please create it in root project directory');
+            trigger_error('storage/dumps folder doesn\'t exist. Please create it in root project directory');
         }
     }
 

@@ -1,7 +1,7 @@
 @extends('chosen-template')
 
 @section('title')
-    Quantic - Forgot
+    Forgot
 @endsection
 
 @section('content')
@@ -14,7 +14,7 @@
                 </div>
             </div>
             <div class="chosen-container-body">
-                <form id="forgotForm" method="POST" action="{{ constellation('password/forgot') }}">
+                <form id="forgotForm" method="POST" action="{{ route('password.email') }}">
                     @csrf
                     @if(session('status'))
                         <div class="chosen-container-withIcon chosen-resent">
@@ -50,7 +50,7 @@
                 </form>
             </div>
             <div class="chosen-container-footer">
-                <a href="{{ constellation('login') }}">Back to login</a>
+                <a href="{{ route('login') }}">Back to login</a>
             </div>
         </div>
     </div>

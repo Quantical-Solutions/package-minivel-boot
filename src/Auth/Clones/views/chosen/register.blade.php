@@ -1,7 +1,7 @@
 @extends('chosen-template')
 
 @section('title')
-    Quantic - Register
+    Register
 @endsection
 
 @section('content')
@@ -14,7 +14,7 @@
                 </div>
             </div>
             <div class="chosen-container-body">
-                <form id="registerForm" method="POST" action="{{ constellation('register') }}">
+                <form id="registerForm" method="POST" action="{{ route('register') }}">
                     @csrf
 
                     <div class="chosen-form-container chosen-form-container-avatar">

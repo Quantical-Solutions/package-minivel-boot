@@ -8,10 +8,10 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="msapplication-tap-highlight" content="no" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title')</title>
+    <title>{{ config('app.name') }} - @yield('title')</title>
     <link rel="canonical" href="{{ config('app.url') }}">
-    <link rel="stylesheet" href="/chosen/quantic-font.css">
-    <link rel="stylesheet" href="/chosen/style.css">
+    <link rel="stylesheet" href="/links/auth/quantic-font.css">
+    <link rel="stylesheet" href="/links/auth/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script type="text/javascript">
         var myApp = {!! json_encode([]) !!};
@@ -19,5 +19,6 @@
 </head>
 <body>
 @yield('content')
+<script src="/links/auth/script.js"></script>
 </body>
 </html>

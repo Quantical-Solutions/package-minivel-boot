@@ -1,7 +1,7 @@
 @extends('chosen-template')
 
 @section('title')
-    Quantic - Login
+    Login
 @endsection
 
 @section('content')

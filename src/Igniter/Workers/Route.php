@@ -104,7 +104,7 @@ class Route
         return new self();
     }
 
-    public function where($data): Route
+    public static function where($data): Route
     {
         $index = count(self::$all) - 1;
         self::$all[$index]->where = $data;

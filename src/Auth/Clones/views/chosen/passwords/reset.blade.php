@@ -1,7 +1,7 @@
 @extends('chosen-template')
 
 @section('title')
-    Quantic - Reset
+    Reset
 @endsection
 
 @section('content')
@@ -14,7 +14,7 @@
                 </div>
             </div>
             <div class="chosen-container-body">
-                <form id="resetForm" method="POST" action="{{ constellation('password/reset') }}">
+                <form id="resetForm" method="POST" action="{{ route('password.update') }}">
                     @csrf
                     <input type="hidden" name="reset_token" value="{{ $token }}">
                     <div class="chosen-form-container">

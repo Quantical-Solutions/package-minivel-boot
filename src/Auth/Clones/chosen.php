@@ -124,15 +124,15 @@ return [
     |
     */
 
-    'namespace' => 'Quantic\\Chosen\\Logic\\',
+    'namespace' => 'Minivel\\Auth\\Logic\\',
 
     'constellations' => [
 
         'login_get' => [
             'data' => [
                 'uri' => 'login',
-                'group' => config('app.url_admin'),
-                'controller' => 'ChosenLogin',
+                'group' => env('APP_URL_ADMIN', config('app.url')),
+                'controller' => 'AuthLogin',
                 'method' => 'showLoginForm',
                 'request' => 'get',
                 'as' => 'login.request'
@@ -143,8 +143,8 @@ return [
         'login_post' => [
             'data' => [
                 'uri' => 'login',
-                'group' => config('app.url_admin'),
-                'controller' => 'ChosenLogin',
+                'group' => env('APP_URL_ADMIN', config('app.url')),
+                'controller' => 'AuthLogin',
                 'method' => 'login',
                 'request' => 'post',
                 'as' => 'login'
@@ -155,8 +155,8 @@ return [
         'logout' => [
             'data' => [
                 'uri' => 'login',
-                'group' => config('app.url_admin'),
-                'controller' => 'ChosenLogin',
+                'group' => env('APP_URL_ADMIN', config('app.url')),
+                'controller' => 'AuthLogin',
                 'method' => 'logout',
                 'request' => 'post',
                 'as' => 'logout'
@@ -167,8 +167,8 @@ return [
         'register_get' => [
             'data' => [
                 'uri' => 'register',
-                'group' => config('app.url_admin'),
-                'controller' => 'ChosenRegister',
+                'group' => env('APP_URL_ADMIN', config('app.url')),
+                'controller' => 'AuthRegister',
                 'method' => 'showRegistrationForm',
                 'request' => 'get',
                 'as' => 'register.request'
@@ -179,8 +179,8 @@ return [
         'register_post' => [
             'data' => [
                 'uri' => 'register',
-                'group' => config('app.url_admin'),
-                'controller' => 'ChosenRegister',
+                'group' => env('APP_URL_ADMIN', config('app.url')),
+                'controller' => 'AuthRegister',
                 'method' => 'register',
                 'request' => 'post',
                 'as' => 'register'
@@ -191,8 +191,8 @@ return [
         'forgot_get' => [
             'data' => [
                 'uri' => 'password/forgot',
-                'group' => config('app.url_admin'),
-                'controller' => 'ChosenForgot',
+                'group' => env('APP_URL_ADMIN', config('app.url')),
+                'controller' => 'AuthForgot',
                 'method' => 'showLinkRequestForm',
                 'request' => 'get',
                 'as' => 'password.request'
@@ -203,8 +203,8 @@ return [
         'forgot_post' => [
             'data' => [
                 'uri' => 'password/forgot',
-                'group' => config('app.url_admin'),
-                'controller' => 'ChosenForgot',
+                'group' => env('APP_URL_ADMIN', config('app.url')),
+                'controller' => 'AuthForgot',
                 'method' => 'sendResetLinkEmail',
                 'request' => 'post',
                 'as' => 'password.email'
@@ -215,8 +215,8 @@ return [
         'reset_get' => [
             'data' => [
                 'uri' => 'password/reset/{token}',
-                'group' => config('app.url_admin'),
-                'controller' => 'ChosenReset',
+                'group' => env('APP_URL_ADMIN', config('app.url')),
+                'controller' => 'AuthReset',
                 'method' => 'showResetForm',
                 'request' => 'get',
                 'as' => 'password.reset'
@@ -227,8 +227,8 @@ return [
         'reset_post' => [
             'data' => [
                 'uri' => 'password/reset',
-                'group' => config('app.url_admin'),
-                'controller' => 'ChosenReset',
+                'group' => env('APP_URL_ADMIN', config('app.url')),
+                'controller' => 'AuthReset',
                 'method' => 'reset',
                 'request' => 'post',
                 'as' => 'password.update'
@@ -239,8 +239,8 @@ return [
         'confirm_get' => [
             'data' => [
                 'uri' => 'password/confirm',
-                'group' => config('app.url_admin'),
-                'controller' => 'ChosenConfirm',
+                'group' => env('APP_URL_ADMIN', config('app.url')),
+                'controller' => 'AuthConfirm',
                 'method' => 'showConfirmForm',
                 'request' => 'get',
                 'as' => 'password.confirm'
@@ -251,8 +251,8 @@ return [
         'confirm_post' => [
             'data' => [
                 'uri' => 'password/confirm',
-                'group' => config('app.url_admin'),
-                'controller' => 'ChosenConfirm',
+                'group' => env('APP_URL_ADMIN', config('app.url')),
+                'controller' => 'AuthConfirm',
                 'method' => 'confirm',
                 'request' => 'post',
                 'as' => 'password.confirmed'
@@ -263,8 +263,8 @@ return [
         'verify_notice_get' => [
             'data' => [
                 'uri' => 'email/verify',
-                'group' => config('app.url_admin'),
-                'controller' => 'ChosenVerify',
+                'group' => env('APP_URL_ADMIN', config('app.url')),
+                'controller' => 'AuthVerify',
                 'method' => 'showNoticeForm',
                 'request' => 'post',
                 'as' => 'verification.notice'
@@ -275,11 +275,12 @@ return [
         'verify_get' => [
             'data' => [
                 'uri' => 'email/verify/{id}/{hash}',
-                'group' => config('app.url_admin'),
-                'controller' => 'ChosenVerify',
+                'group' => env('APP_URL_ADMIN', config('app.url')),
+                'controller' => 'AuthVerify',
                 'method' => 'verify',
                 'request' => 'post',
-                'as' => 'verification.verify'
+                'as' => 'verification.verify',
+                'where' => ['id' => '[0-9]+']
             ],
             'view' => 'chosen/verify'
         ],
@@ -287,8 +288,8 @@ return [
         'verify_post' => [
             'data' => [
                 'uri' => 'email/resend',
-                'group' => config('app.url_admin'),
-                'controller' => 'ChosenVerify',
+                'group' => env('APP_URL_ADMIN', config('app.url')),
+                'controller' => 'AuthVerify',
                 'method' => 'resend',
                 'request' => 'post',
                 'as' => 'verification.resend'

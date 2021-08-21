@@ -24,8 +24,6 @@ class Render
                 $request->segments -= $count;
             }
 
-
-
             if (count($route->required) === $request->segments || $route->segments === $request->segments) {
 
                 $args = $route->args;
@@ -38,7 +36,7 @@ class Render
                             $this->middlewares($route->middlewares);
                             $controller = $route->controller;
                             $method = $route->function;
-                            $render = new ('App\\Http\\Controllers\\' . $controller);
+                            $render = new ($controller);
                             echo $render->$method();
                             return;
 
@@ -59,7 +57,7 @@ class Render
                             $controller = $final->controller;
                             $method = $final->function;
                             $arguments = $this->setArguments($final->args);
-                            $render = new ('App\\Http\\Controllers\\' . $controller);
+                            $render = new ($controller);
                             echo call_user_func_array(array($render, $method), $arguments);
                             return;
 

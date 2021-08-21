@@ -1,7 +1,7 @@
 @extends('chosen-template')
 
 @section('title')
-    Quantic - Confirm
+    Confirm
 @endsection
 
 @section('content')
@@ -14,7 +14,7 @@
                 </div>
             </div>
             <div class="chosen-container-body">
-                <form id="confirmForm" method="POST" action="{{ constellation('password/confirm') }}">
+                <form id="confirmForm" method="POST" action="{{ route('password.confirmed') }}">
                     @csrf
                     <div class="chosen-form-container">
                         <p>Please confirm your password before continuing.</p>
@@ -48,7 +48,7 @@
                 </form>
             </div>
             <div class="chosen-container-footer">
-                <a href="{{ constellation('password/forgot') }}">Forgot password ?</a>
+                <a href="{{ route('password.request') }}">Forgot password ?</a>
             </div>
         </div>
     </div>

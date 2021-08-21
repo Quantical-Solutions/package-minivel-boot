@@ -1,7 +1,7 @@
 @extends('chosen-template')
 
 @section('title')
-    Quantic - Verify
+    Verify
 @endsection
 
 @section('content')
@@ -25,7 +25,7 @@
                 <p>Before proceeding, please check your email for a verification link.</p>
                 <br>
                 <p>If you didn't received any email please click on the resend email link.</p>
-                <form id="verifyForm" method="POST" action="{{ constellation('email/resend') }}">
+                <form id="verifyForm" method="POST" action="{{ route('verification.resend') }}">
                     @csrf
 
                     <div class="chosen-form-container-buttons">

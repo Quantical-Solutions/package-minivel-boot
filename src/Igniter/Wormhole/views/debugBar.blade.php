@@ -24,7 +24,7 @@
         {!! require_once(dirname(__DIR__) . '/assets/styles/ocean.css') !!}}
         {!! require_once(dirname(__DIR__) . '/assets/style.css') !!}}
     </style>
-    <script type="text/javascript" src="{{ config('app.url') }}/vendor/minivel/boot/src/Igniter/Workers/handlerAssets/assets/highlight.pack.js"></script>
+    <script type="text/javascript" src="{{ config('app.url') }}/links/errors/handlerAssets/assets/highlight.pack.js"></script>
     <div id="resize-wormholeBottomBar">
         <span>___</span>
         <span>___</span>

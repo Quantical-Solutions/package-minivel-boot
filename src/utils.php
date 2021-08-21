@@ -89,8 +89,8 @@ if (!function_exists('route')) {
     {
         $routes = Route::all();
         foreach ($routes as $route) {
-            if ($route['name'] === $name) {
-                echo $route['uri'];
+            if ($route->name === $name) {
+                echo $route->uri;
                 return;
             }
         }
@@ -106,11 +106,15 @@ if (!function_exists('request')) {
     }
 }
 
+/**
+ * csrf_token function
+ *
+ * Return CSRF Token
+ */
 if (!function_exists('csrf_token')) {
-
     function csrf_token()
     {
-        echo '123456789';
+        return end($_SESSION['_token']);
     }
 }
 
@@ -369,6 +373,10 @@ if (!function_exists('storage_path')) {
 $newSessionName = str_replace('-', '_', str_replace(' ', '_', strtolower(config('app.name'))) . '_session');
 if (session_name() != $newSessionName) { session_name($newSessionName); }
 session_start();
+
+if (class_exists(Deploy::class)) {
+    new Deploy;
+}
 
 if (isset($_SERVER['HTTP_HOST']) && isset($_SERVER['REQUEST_URI'])) {
     symlinker();

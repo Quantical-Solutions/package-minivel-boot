@@ -7,12 +7,12 @@ class Deploy
     private string $appResources = '';
     private string $originalViews = '';
     private string $configFile = '';
-    private bool $alreadyDone = false;
+    private bool $todo = false;
 
     public function __construct()
     {
         $this->setVariables();
-        if ($this->alreadyDone == true) {
+        if ($this->todo == true) {
             $this->preparePack();
         }
     }
@@ -26,8 +26,12 @@ class Deploy
             $this->configFile = dirname(__DIR__) . '/Clones/chosen.php';
 
             if (!file_exists(ROOTDIR . '/resources/views/chosen')) {
-                $this->alreadyDone = true;
+                $this->todo = true;
             }
+
+        } else {
+
+            trigger_error('Constant "ROOTDIR" is not set.');
         }
     }
 
