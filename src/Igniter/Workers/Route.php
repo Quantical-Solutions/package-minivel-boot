@@ -116,8 +116,6 @@ class Route
         $refs = [];
         foreach ($array as $item) {
             $mid = Kernel::append_middlewares($item);
-            $exec = new $mid;
-            $exec->rules();
             $refs[$item] = $mid;
         }
 

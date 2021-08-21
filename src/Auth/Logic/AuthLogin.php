@@ -22,18 +22,20 @@ class AuthLogin
 
     public function showLoginForm()
     {
-        views($this->viewLoginForm, ['name' => config('app.name'), 'stt' => 'formLogin', 'errors' => $this->errors]);
+        return views($this->viewLoginForm, ['name' => config('app.name'), 'stt' => 'formLogin', 'errors' =>
+            $this->errors]);
     }
 
     public function login()
     {
         echo 'post';
-        views($this->viewLogin, ['name' => config('app.name'), 'stt' => 'login', 'errors' => $this->errors]);
+        return views($this->viewLogin, ['name' => config('app.name'), 'stt' => 'login', 'errors' => $this->errors]);
     }
 
     public function logout()
     {
-        views($this->viewLogout, ['name' => config('app.name'), 'stt' => 'logout', 'errors' => $this->errors]);
+        Auth::reset();
+        return redirect('/login');
     }
 
     private function rules()

@@ -33,12 +33,18 @@ class Render
 
                         if ($route->method === $request->method) {
 
-                            $this->middlewares($route->middlewares);
-                            $controller = $route->controller;
-                            $method = $route->function;
-                            $render = new ($controller);
-                            echo $render->$method();
-                            return;
+                            if ($this->middlewares($route->middlewares)) {
+
+                                $controller = $route->controller;
+                                $method = $route->function;
+                                $render = new ($controller);
+                                echo $render->$method();
+                                return;
+
+                            } else {
+
+                                handleErrors(403);
+                            }
 
                         } else {
 
@@ -53,13 +59,19 @@ class Render
 
                         if ($route->method === $request->method) {
 
-                            $this->middlewares($route->middlewares);
-                            $controller = $final->controller;
-                            $method = $final->function;
-                            $arguments = $this->setArguments($final->args);
-                            $render = new ($controller);
-                            echo call_user_func_array(array($render, $method), $arguments);
-                            return;
+                            if ($this->middlewares($route->middlewares)) {
+
+                                $controller = $final->controller;
+                                $method = $final->function;
+                                $arguments = $this->setArguments($final->args);
+                                $render = new ($controller);
+                                echo call_user_func_array(array($render, $method), $arguments);
+                                return;
+
+                            } else {
+
+                                handleErrors(403);
+                            }
 
                         } else {
 
@@ -186,7 +198,10 @@ class Render
 
         $next = true;
         if (!empty($middlewares)) {
-
+            foreach ($middlewares as $middleware) {
+                $exec = new $middleware;
+                $next = $exec->rules();
+            }
         }
 
         return $next;

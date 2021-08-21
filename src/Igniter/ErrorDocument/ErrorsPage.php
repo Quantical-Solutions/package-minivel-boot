@@ -22,6 +22,7 @@ class ErrorsPage
             408 => 'Request Time-out',
             409 => 'Conflict',
             413 => 'Payload Too Large',
+            419 => 'Security token expired',
             500 => 'Server Error',
             502 => 'Bad Gateway',
             503 => 'Service Temporarily Unavailable',

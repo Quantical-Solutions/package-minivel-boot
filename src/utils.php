@@ -83,6 +83,15 @@ if (!function_exists('session')) {
     }
 }
 
+if (!function_exists('redirect')) {
+
+    function redirect($url)
+    {
+        header('Location: ' . $url);
+        exit();
+    }
+}
+
 if (!function_exists('route')) {
 
     function route($name)
@@ -114,7 +123,7 @@ if (!function_exists('request')) {
 if (!function_exists('csrf_token')) {
     function csrf_token()
     {
-        return end($_SESSION['_token']);
+        return $_SESSION['_token'];
     }
 }
 
