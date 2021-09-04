@@ -4,18 +4,35 @@ namespace Minivel\Auth\Matrix;
 
 class FormErrors
 {
-    public function __construct()
-    {
+    private static object $errors;
 
+    public static function get(): FormErrors
+    {
+        self::$errors = (object) [];
+        return new self();
+    }
+    public static function has($name): bool
+    {
+        $errors = self::$errors;
+        foreach ($errors as $key => $error) {
+            if ($name === $key) {
+                return true;
+            }
+        }
+        return false;
     }
 
-    public function has($name)
+    public static function first($name): ?string
     {
-        return $name;
+        $errors = self::$errors;
+        if (isset($errors[$name])) {
+            return $errors[$name];
+        }
+        return null;
     }
 
-    public function first($name)
+    public static function all(): object
     {
-        return $name;
+        return self::$errors;
     }
 }

@@ -25,7 +25,7 @@
                         <div class="chosen-image-preview-container">
                             <i onclick="this.nextElementSibling.nextElementSibling.click()" class="quantic-icon-picture" title="Upload image"></i>
                             <i onclick="resetChosenImagePreview(this)" class="quantic-icon-cancel1" title="Upload image"></i>
-                            <input type="file" accept="image/*" id="register_avatar" name="register_avatar" onchange="displayChosenImagePreview(this)">
+                            <input type="file" accept="image/*" id="register_avatar" name="register_avatar" onchange="displayChosenImagePreview(this)" autocomplete="off">
                         </div>
                     </div>
 
@@ -42,7 +42,7 @@
                                 </span>
                             @endif
                         </div>
-                        <input class="{{ $errors->has('register_firstname') ? ' is-invalid' : '' }}" type="text" id="register_firstname" name="register_firstname">
+                        <input class="{{ $errors->has('register_firstname') ? ' is-invalid' : '' }}" type="text" id="register_firstname" name="register_firstname" autocomplete="off">
                     </div>
 
                     <div class="chosen-form-container">
@@ -56,7 +56,7 @@
                                 </span>
                             @endif
                         </div>
-                        <input class="{{ $errors->has('register_lastname') ? ' is-invalid' : '' }}" type="text" id="register_lastname" name="register_lastname">
+                        <input class="{{ $errors->has('register_lastname') ? ' is-invalid' : '' }}" type="text" id="register_lastname" name="register_lastname" autocomplete="off">
                     </div>
 
                     <div class="chosen-form-container">
@@ -70,7 +70,7 @@
                                 </span>
                             @endif
                         </div>
-                        <input class="{{ $errors->has('register_email') ? ' is-invalid' : '' }}" type="email" id="register_email" name="register_email">
+                        <input class="{{ $errors->has('register_email') ? ' is-invalid' : '' }}" type="email" id="register_email" name="register_email" autocomplete="off">
                     </div>
 
                     <div class="chosen-form-container">
@@ -84,7 +84,9 @@
                                 </span>
                             @endif
                         </div>
-                        <input class="{{ $errors->has('register_password') ? ' is-invalid' : '' }}" type="password" id="register_password" name="register_password">
+                        <input class="{{ $errors->has('register_password') ? ' is-invalid' : '' }}" type="password"
+                               id="register_password" name="register_password" autocomplete="off" data-pattern="{{
+                               config('chosen.passwords')['users']['pattern'] }}">
                         <i onclick="displayPassword(this)" class="password-displayer quantic-icon-locked1"></i>
                     </div>
 
@@ -99,7 +101,9 @@
                                 </span>
                             @endif
                         </div>
-                        <input class="{{ $errors->has('register_confirm_password') ? ' is-invalid' : '' }}" type="password" id="register_confirm_password" name="register_confirm_password">
+                        <input class="{{ $errors->has('register_confirm_password') ? ' is-invalid' : '' }}"
+                               type="password" id="register_confirm_password" name="register_confirm_password"
+                               autocomplete="off" data-pattern="{{ config('chosen.passwords')['users']['pattern'] }}">
                         <i onclick="displayPassword(this)" class="password-displayer quantic-icon-locked1"></i>
                     </div>
 
@@ -133,7 +137,7 @@
                                 </span>
                             @endif
                         </div>
-                        <input class="{{ $errors->has('register_address') ? ' is-invalid' : '' }}" type="text" id="register_address" name="register_address">
+                        <input class="{{ $errors->has('register_address') ? ' is-invalid' : '' }}" type="text" id="register_address" name="register_address" autocomplete="off">
                     </div>
 
                     <div class="chosen-form-container">
@@ -147,7 +151,7 @@
                                 </span>
                             @endif
                         </div>
-                        <input class="{{ $errors->has('register_address_details') ? ' is-invalid' : '' }}" type="text" id="register_address_details" name="register_address_details">
+                        <input class="{{ $errors->has('register_address_details') ? ' is-invalid' : '' }}" type="text" id="register_address_details" name="register_address_details" autocomplete="off">
                     </div>
 
                     <div class="chosen-form-container">
@@ -175,7 +179,7 @@
                                 </span>
                             @endif
                         </div>
-                        <input class="{{ $errors->has('register_address_city') ? ' is-invalid' : '' }}" type="text" id="register_address_city" name="register_address_city">
+                        <input class="{{ $errors->has('register_address_city') ? ' is-invalid' : '' }}" type="text" id="register_address_city" name="register_address_city" autocomplete="off">
                     </div>
 
                     <div class="chosen-form-container">
@@ -189,7 +193,7 @@
                                 </span>
                             @endif
                         </div>
-                        <input class="{{ $errors->has('register_address_state') ? ' is-invalid' : '' }}" type="text" id="register_address_state" name="register_address_state">
+                        <input class="{{ $errors->has('register_address_state') ? ' is-invalid' : '' }}" type="text" id="register_address_state" name="register_address_state" autocomplete="off">
                     </div>
 
                     <div class="chosen-form-container">
@@ -203,7 +207,7 @@
                                 </span>
                             @endif
                         </div>
-                        <input class="{{ $errors->has('register_address_country') ? ' is-invalid' : '' }}" type="text" id="register_address_country" name="register_address_country">
+                        <input class="{{ $errors->has('register_address_country') ? ' is-invalid' : '' }}" type="text" id="register_address_country" name="register_address_country" autocomplete="off">
                     </div>
 
                     <div class="chosen-form-container-buttons">

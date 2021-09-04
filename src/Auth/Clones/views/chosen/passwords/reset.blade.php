@@ -28,7 +28,9 @@
                                 </span>
                             @endif
                         </div>
-                        <input class="{{ $errors->has('reset_password') ? ' is-invalid' : '' }}" type="password" id="reset_password" name="reset_password">
+                        <input class="{{ $errors->has('reset_password') ? ' is-invalid' : '' }}" type="password"
+                               id="reset_password" name="reset_password" autocomplete="off" data-pattern="{{ config
+                               ('chosen.passwords')['users']['pattern'] }}">
                         <i onclick="displayPassword(this)" class="password-displayer quantic-icon-locked1"></i>
                     </div>
 
@@ -43,7 +45,9 @@
                                 </span>
                             @endif
                         </div>
-                        <input class="{{ $errors->has('reset_new_password') ? ' is-invalid' : '' }}" type="password" id="reset_new_password" name="reset_new_password">
+                        <input class="{{ $errors->has('reset_new_password') ? ' is-invalid' : '' }}" type="password"
+                               id="reset_new_password" name="reset_new_password" autocomplete="off" data-pattern="{{
+                               config('chosen.passwords')['users']['pattern'] }}">
                         <i onclick="displayPassword(this)" class="password-displayer quantic-icon-locked1"></i>
                     </div>
 
@@ -58,7 +62,9 @@
                                 </span>
                             @endif
                         </div>
-                        <input class="{{ $errors->has('reset_confirm_password') ? ' is-invalid' : '' }}" type="password" id="reset_confirm_password" name="reset_confirm_password">
+                        <input class="{{ $errors->has('reset_confirm_password') ? ' is-invalid' : '' }}"
+                               type="password" id="reset_confirm_password" name="reset_confirm_password"
+                               autocomplete="off" data-pattern="{{ config('chosen.passwords')['users']['pattern'] }}">
                         <i onclick="displayPassword(this)" class="password-displayer quantic-icon-locked1"></i>
                     </div>
 

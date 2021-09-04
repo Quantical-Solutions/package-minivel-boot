@@ -10,11 +10,12 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name') }} - @yield('title')</title>
     <link rel="canonical" href="{{ config('app.url') }}">
+    <link rel="icon" href="/links/errors/handlerAssets/assets/favicon.png">
     <link rel="stylesheet" href="/links/auth/quantic-font.css">
     <link rel="stylesheet" href="/links/auth/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script type="text/javascript">
-        var myApp = {!! json_encode([]) !!};
+        let trans = {!! json_encode(translateJS()) !!};
     </script>
 </head>
 <body>

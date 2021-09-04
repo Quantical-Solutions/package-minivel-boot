@@ -31,7 +31,9 @@
                                 </span>
                                 @endif
                             </div>
-                            <input class="{{ $errors->has('confirm_password') ? ' is-invalid' : '' }}" type="password" id="confirm_password" name="confirm_password">
+                            <input class="{{ $errors->has('confirm_password') ? ' is-invalid' : '' }}"
+                                   type="password" id="confirm_password" name="confirm_password" autocomplete="off"
+                                   data-pattern="{{ config('chosen.passwords')['users']['pattern'] }}">
                             <i onclick="displayPassword(this)" class="password-displayer quantic-icon-locked1"></i>
                         </div>
                     </div>

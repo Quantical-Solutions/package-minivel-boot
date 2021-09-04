@@ -14,6 +14,7 @@ class Render
     private function view($routes)
     {
         $request = Request::params();
+        $badMethod = false;
 
         foreach ($routes as $route) {
 
@@ -31,9 +32,9 @@ class Render
 
                     if ($route->uri === $request->url) {
 
-                        if ($route->method === $request->method) {
+                        if ($this->middlewares($route->middlewares)) {
 
-                            if ($this->middlewares($route->middlewares)) {
+                            if ($route->method === $request->method) {
 
                                 $controller = $route->controller;
                                 $method = $route->function;
@@ -43,12 +44,12 @@ class Render
 
                             } else {
 
-                                handleErrors(403);
+                                $badMethod = true;
                             }
 
                         } else {
 
-                            trigger_error('The "' . $request->method . '" method is not allowed for this Route.');
+                            handleErrors(403);
                         }
                     }
 
@@ -57,9 +58,9 @@ class Render
                     $final = $this->uriCleaner($route, $request);
                     if ($final !== false) {
 
-                        if ($route->method === $request->method) {
+                        if ($this->middlewares($route->middlewares)) {
 
-                            if ($this->middlewares($route->middlewares)) {
+                            if ($route->method === $request->method) {
 
                                 $controller = $final->controller;
                                 $method = $final->function;
@@ -70,16 +71,21 @@ class Render
 
                             } else {
 
-                                handleErrors(403);
+                                $badMethod = true;
                             }
 
                         } else {
 
-                            trigger_error('The "' . $request->method . '" method is not allowed for this Route.');
+                            handleErrors(403);
                         }
                     }
                 }
             }
+        }
+
+        if ($badMethod === true) {
+
+            trigger_error('The "' . $request->method . '" method is not allowed for this Route.');
         }
 
         handleErrors(404);

@@ -35,7 +35,7 @@
                                 </span>
                             @endif
                         </div>
-                        <input class="{{ $errors->has('forgot_email') ? ' is-invalid' : '' }}" type="email" id="forgot_email" name="forgot_email">
+                        <input class="{{ $errors->has('forgot_email') ? ' is-invalid' : '' }}" type="email" id="forgot_email" name="forgot_email" autocomplete="off">
                     </div>
                     <div class="chosen-form-container-buttons">
                         <button disabled class="chosen-container-withIcon" type="submit" id="login_submit_btn">

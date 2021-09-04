@@ -90,6 +90,9 @@ return [
     | considered valid. This security feature keeps tokens short-lived so
     | they have less time to be guessed. You may change this as needed.
     |
+    | Regex ex : 'pattern' => '^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!#\*\?])(?=.{8,})' // At least 8 characters,
+    |             min 1 Uppercase 1 Lowercase 1 Number and 1 special char.
+    |
     */
 
     'passwords' => [
@@ -98,6 +101,7 @@ return [
             'table' => 'password_resets',
             'expire' => 60,
             'throttle' => 60,
+            'pattern' => '^(?=.*[a-z])(?=.*[0-9])(?=.{8,})' // At least 8 characters, 1 Lowercase 1 Number
         ],
     ],
 
@@ -126,6 +130,8 @@ return [
 
     'namespace' => 'Minivel\\Auth\\Logic\\',
 
+    'home_page' => '/',
+
     'constellations' => [
 
         'login_get' => [
@@ -149,12 +155,12 @@ return [
                 'request' => 'post',
                 'as' => 'login'
             ],
-            'view' => 'home'
+            'view' => 'chosen/login'
         ],
 
         'logout' => [
             'data' => [
-                'uri' => 'login',
+                'uri' => 'logout',
                 'group' => env('APP_URL_ADMIN', config('app.url')),
                 'controller' => 'AuthLogin',
                 'method' => 'logout',

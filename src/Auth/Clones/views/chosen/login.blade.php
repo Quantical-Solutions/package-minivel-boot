@@ -1,7 +1,7 @@
 @extends('chosen-template')
 
 @section('title')
-    Login
+    Quantic - Login
 @endsection
 
 @section('content')
@@ -14,7 +14,7 @@
                 </div>
             </div>
             <div class="chosen-container-body">
-                <form id="loginForm" method="POST" action="{{ constellation('login') }}">
+                <form id="loginForm" method="POST" action="{{ route('login') }}">
                     @csrf
                     <div class="chosen-form-container">
                         <div class="chosen-container-withIcon">
@@ -27,12 +27,13 @@
                                 </span>
                             @endif
                         </div>
-                        <input class="{{ $errors->has('login_email') ? ' is-invalid' : '' }}" type="email" id="login_email" name="login_email">
+                        <input class="{{ $errors->has('login_email') ? ' is-invalid' : '' }}" type="email"
+                               id="login_email" name="login_email" autocomplete="off">
                     </div>
                     <div class="chosen-form-container">
                         <div class="chosen-container-withIcon">
                             <i class="quantic-icon-key"></i>
-                            <label for="login_password">Password</label>
+                            <label for="login_password">{{ __('Password') }}</label>
                             @if($errors->has('login_password'))
                                 <span class="chosen-not-valid">
                                     <i class="quantic-icon-warning"></i>
@@ -40,7 +41,9 @@
                                 </span>
                             @endif
                         </div>
-                        <input class="{{ $errors->has('login_password') ? ' is-invalid' : '' }}" type="password" id="login_password" name="login_password">
+                        <input class="{{ $errors->has('login_password') ? ' is-invalid' : '' }}" type="password"
+                               id="login_password" name="login_password" autocomplete="off" data-pattern="{{ config
+                               ('chosen.passwords')['users']['pattern'] }}">
                         <i onclick="displayPassword(this)" class="password-displayer quantic-icon-locked1"></i>
                     </div>
                     <div class="chosen-form-container-buttons">
@@ -61,7 +64,7 @@
             </div>
             <div class="chosen-container-footer">
                 <a href="/">Back to home</a>
-                <a href="{{ constellation('password/forgot') }}">Forgot password</a>
+                <a href="{{ route('password.request') }}">Forgot password</a>
             </div>
         </div>
     </div>

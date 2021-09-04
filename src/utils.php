@@ -368,6 +368,55 @@ if (!function_exists('humanizeSize')) {
 }
 
 /**
+ * Translate function
+ *
+ * Translate languages from locale if json file exist in resources/lang
+ */
+if (!function_exists('__')) {
+
+    function __($str) {
+
+        $lang = config('app.locale');
+        $path = ROOTDIR . '/resources/lang';
+
+        if (file_exists($path . '/' . $lang . '.json')) {
+
+            $file = file_get_contents($path . '/' . $lang . '.json');
+            $json = json_decode($file, true);
+            if (isset($json[$str])) {
+                return $json[$str];
+            } else {
+                return $str;
+            }
+        }
+
+        return $str;
+    }
+}
+
+/**
+ * Translate function for frontend JS
+ *
+ * Deliver translations from locale if translation json file exists
+ */
+if (!function_exists('translateJS')) {
+
+    function translateJS()
+    {
+        $lang = config('app.locale');
+        $path = ROOTDIR . '/resources/lang';
+
+        if (file_exists($path . '/' . $lang . '.json')) {
+
+            $file = file_get_contents($path . '/' . $lang . '.json');
+            return json_decode($file, true);
+        }
+
+        return [];
+    }
+}
+
+/**
  * storage_path function
  *
  * Define the storage path

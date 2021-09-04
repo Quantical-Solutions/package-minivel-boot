@@ -36,7 +36,7 @@ class Request
         }
     }
 
-    public static function helper(): \App\Core\Request
+    public static function helper(): Request
     {
         return new self();
     }

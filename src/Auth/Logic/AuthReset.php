@@ -6,18 +6,15 @@ use Carbon\Carbon;
 use Jenssegers\Blade\Blade;
 use Minivel\Auth\Matrix\Auth;
 use Minivel\Auth\Matrix\Email;
-use Minivel\Auth\Matrix\FormErrors as Errors;
 
 class AuthReset
 {
     private string $viewResetForm;
     private string $viewReset;
-    private object $errors;
     private string $token;
 
     public function __construct()
     {
-        $this->errors = new Errors;
         $this->token = $this->generateToken(100);
         $this->viewResetForm = (config('chosen.constellations'))['reset_get']['view'];
         $this->viewReset = (config('chosen.constellations'))['reset_post']['view'];
@@ -25,12 +22,12 @@ class AuthReset
 
     public function showResetForm()
     {
-        views($this->viewResetForm, ['name' => config('app.name'), 'stt' => 'formReset', 'token' => $this->token, 'errors' => $this->errors]);
+        views($this->viewResetForm, ['name' => config('app.name'), 'stt' => 'formReset', 'token' => $this->token]);
     }
 
     public function reset()
     {
-        views($this->viewReset, ['name' => config('app.name'), 'stt' => 'reset', 'token' => $this->token, 'errors' => $this->errors]);
+        views($this->viewReset, ['name' => config('app.name'), 'stt' => 'reset', 'token' => $this->token]);
     }
 
     private function generateToken( $valLength )

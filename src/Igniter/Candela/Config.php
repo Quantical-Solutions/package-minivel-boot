@@ -10,6 +10,7 @@ use Minivel\Igniter\Solutions\Solutions;
 use Minivel\Igniter\Candela\Expander as Database;
 use Illuminate\Database\Capsule\Manager as DB;
 use Minivel\Igniter\Spectral\DataCollector;
+use Minivel\Auth\Matrix\FormErrors as Errors;
 
 class Config
 {
@@ -97,6 +98,7 @@ class Config
             $_ENV['constellation']['main']['file'] = $file;
 
             $blade = new Blade(ROOTDIR . $resources, ROOTDIR . $cache);
+            $data['errors'] = Errors::get();
             $original = $blade->render($view, $data);
             $uxDebugger = (class_exists('Minivel\Uxdebugger\Debugger')) ? Uxdebug::ignite() : false;
             $debug = Wormhole::BottomBar(config('wormhole.bottombar'), $uxDebugger, array(
